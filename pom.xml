@@ -3,8 +3,12 @@
     <groupId>ru.skorikov</groupId>
     <artifactId>IPAddres</artifactId>
     <version>2.0</version>
+    <modules>
+        <module>IPAddres</module>
+        <module>CopyObject</module>
+    </modules>
     <name>IPAddres</name>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
@@ -18,12 +22,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
+                <version>3.0.0</version>
                 <dependencies>
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>6.11.2</version>
+                        <version>8.18</version>
                     </dependency>
                 </dependencies>
                 <executions>
