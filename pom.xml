@@ -6,6 +6,10 @@
     <modules>
         <module>IPAddres</module>
         <module>CopyObject</module>
+        <module>SmallTests</module>
+        <module>Miner</module>
+        <module>GroupStringCount</module>
+        <module>AlgorithmicTasks</module>
     </modules>
     <name>IPAddres</name>
     <packaging>pom</packaging>
@@ -23,13 +27,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
                 <version>3.0.0</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.puppycrawl.tools</groupId>
-                        <artifactId>checkstyle</artifactId>
-                        <version>8.18</version>
-                    </dependency>
-                </dependencies>
                 <executions>
                     <execution>
                         <id>validate</id>
@@ -43,6 +40,25 @@
                         </configuration>
                         <goals>
                             <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -76,29 +92,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.0.2</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.github.jsimone</groupId>
-                                    <artifactId>webapp-runner</artifactId>
-                                    <version>8.5.31.0</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
