@@ -41,7 +41,7 @@ public class StartExample {
     public void start() {
         while (true) {
             writer.println("For exit enter : exit");
-            writer.print("Enter number : ");
+            writer.println("Enter number : ");
             String str = reader.readLine();
             if (str.equals("exit")) {
                 break;
@@ -51,7 +51,7 @@ public class StartExample {
                 if (num <= 0) {
                     throw new ArithmeticException();
                 }
-                writer.println(checker.checkNumber(num));
+                checker.printRezult(num);
             } catch (ArithmeticException e) {
                 writer.println("Number must be > 0");
             } catch (NumberFormatException e) {

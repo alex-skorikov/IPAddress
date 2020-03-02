@@ -1,4 +1,4 @@
-package twothreads;
+package twothreads.readerwriter;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,9 @@
-package twothreads;
+package twothreads.logic;
+
+import twothreads.file.CreateFile;
+import twothreads.file.MyCreateFile;
+import twothreads.readerwriter.ReadableWritable;
+import twothreads.readerwriter.ReaderWriter;
 
 import java.io.File;
 import java.io.IOException;
@@ -62,7 +67,7 @@ public class Start  implements Startable {
         thread.join();
         thread2.join();
         try {
-            System.out.printf("File conteins %s", readableWritable.read());
+            System.out.printf("File conteins %s\n\n", readableWritable.read());
         } catch (IOException e) {
             e.printStackTrace();
         }

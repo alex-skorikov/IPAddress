@@ -1,4 +1,4 @@
-package twothreads;
+package twothreads.logic;
 
 /**
  * Interface startable.

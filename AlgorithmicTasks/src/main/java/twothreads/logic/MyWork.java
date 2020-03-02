@@ -1,4 +1,6 @@
-package twothreads;
+package twothreads.logic;
+
+import twothreads.readerwriter.ReadableWritable;
 
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicInteger;

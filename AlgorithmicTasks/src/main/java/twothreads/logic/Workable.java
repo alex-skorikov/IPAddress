@@ -1,4 +1,4 @@
-package twothreads;
+package twothreads.logic;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package twothreads;
+package twothreads.file;
 
 import java.io.File;
 

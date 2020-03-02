@@ -18,7 +18,9 @@ public class StartApplication {
     public static void main(String[] args) {
         Writer writer = new WriterIMPL();
         Reader reader = new ReaderIMPL();
-        Checker checker = new Example1();
+
+        Checker checker = new Example1(writer);
+
         StartExample startExample = new StartExample(checker, reader, writer);
         startExample.start();
 
